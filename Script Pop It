@@ -1,0 +1,152 @@
+if game:GetService("CoreGui"):FindFirstChild("FluxLib") then
+    game:GetService("CoreGui"):FindFirstChild("FluxLib"):Destroy()
+end
+local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/LuciferNzqxz/BAMBYZ/main/LxifLib")()
+local win = Flux:Window("Pop It Simualtor", "", Color3.fromRGB(255,0,0), Enum.KeyCode.RightControl)
+local tab = win:Tab("Main", "http://www.roblox.com/asset/?id=6023426915")
+tab:Button("Credit: Thziin YT#2105", "Thziin YT#2105", function()
+Flux:Notification("Make By Thziin  YT", "Done")
+end)
+tab:Label("Discord Server :  ")
+tab:Button("Nao tenho Discord", "Nao tenho Discord", function()
+setclipboard("Nao Tenho Discord")
+end)
+tab:Line()
+local AutoFarm = win:Tab("Auto Farm", "http://www.roblox.com/asset/?id=6022668888")
+AutoFarm:Toggle("Auto Click", "",false, function(State)
+_G.Autotap = State
+  while _G.Autotap do wait()
+local Event = game:GetService("ReplicatedStorage").Remotes.addCash
+Event:FireServer()
+wait(.1)
+end
+end)
+local AutoFarm = win:Tab("Auto Gems / Cash", "http://www.roblox.com/asset/?id=6022668888")
+AutoFarm:Toggle("Auto Cash", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+    for i,v in pairs(game:GetService("Workspace").Cash1:GetDescendants()) do
+        if v.Name == "TouchInterest" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+wait(.1)
+        end
+        end
+end
+end)
+AutoFarm:Toggle("Auto Gems", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+    for i,v in pairs(game:GetService("Workspace").Gems:GetDescendants()) do
+        if v.Name == "TouchInterest" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+wait(.1)
+        end
+        end
+end
+end)
+local Auto = win:Tab("Auto Upgrades", "http://www.roblox.com/asset/?id=6022668888")
+Auto:Toggle("Buy Cash Magnet", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "Cash Magnet Boost"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+Auto:Toggle("Buy 3x Cash", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "3x Cash Boost"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+Auto:Toggle("Buy Flamingo", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "Flamingo"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+Auto:Toggle("Buy Elephant", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "Elephant"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+Auto:Toggle("Buy Rainbow Flamingo", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "Rainbow Flamingo"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+Auto:Toggle("Buy Rainbow Elephant", "",false, function(State)
+_G.autoyen = State
+while _G.autoyen do wait()
+local A_1 = "Rainbow Elephant"
+local Event = game:GetService("ReplicatedStorage").Remotes.gemShopPurchaser
+Event:FireServer(A_1)
+wait(.1)
+end
+end)
+local Auto = win:Tab("Teleport Player", "http://www.roblox.com/asset/?id=6022668888")
+players = {}
+
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+     table.insert(players,v.Name)
+end
+
+Auto:Dropdown("Select Player", players, function(String)
+    Select1 = String
+end)
+Auto:Button("Teleport","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Select1].Character.HumanoidRootPart.CFrame
+end)
+local Auto = win:Tab("Teleport Worlds", "http://www.roblox.com/asset/?id=6022668888")
+Auto:Button("Starter World","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, -92.6179199, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+Auto:Button("Beach","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, 189.13208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+Auto:Button("Ice","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, 504.38208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+Auto:Button("Desert","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, 895.88208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+Auto:Button("Jungle","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, 1177.38208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+Auto:Button("City","", function()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-470.250793, 28.8699989, 1510.63208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+local tab2 = win:Tab("Misc", "http://www.roblox.com/asset/?id=6022668888")
+tab2:Button("Destroy GUI","",function()
+    game.CoreGui.FluxLib:Destroy()
+end)
+tab2:Slider("Walkspeed", "",0,500,16,function(t)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t
+end)
+tab2:Slider("JumpPower", "",0,500,16,function(y)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = y
+end)
+tab2:Line()
+tab2:Button("Claim Daily Spin", "", function()
+_G.autoyen = State
+while _G.autoyen do wait()
+local Event = game:GetService("ReplicatedStorage").Remotes.Spinner
+Event:InvokeServer()
+wait(.1)
+end
+end)
